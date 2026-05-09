@@ -1,0 +1,782 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(Tipografia/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Aboreto";
+    src: url(Tipografia/Aboreto-Regular.ttf);
+}
+
+:root {
+    --primary: #1c4c2c;
+    --primary-dark: #163721;
+    --primary-light: #367d4d;
+    --primary-lighter: #5c8a6b;
+
+    --secondary: #AD9659;
+    --secondary-dark: #867443;
+    --secondary-light: #dec278;
+    --secondary-darker:  #232017;
+    --secondary-lighter:  #675e43;
+
+    --tertiary:  #291d33;
+    
+    --white: #F3F2EF;
+
+
+
+    --spacing-xs: .25rem;
+    --spacing-sm: .5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.5rem;
+}
+
+
+
+
+body {
+    font-family: "Montserrat";
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+a {
+    font-family: "Aboreto";
+}
+
+h1 {
+    font-size: var(--spacing-xxl);
+}
+
+h2 {
+    text-align:left;
+
+    font-size: var(--spacing-xl);
+}
+
+img:not(header img) {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0; 
+  }
+ 
+  .vinias{
+    margin: 0; 
+  }
+ 
+
+.contenedorMaximo {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contenedorMinimo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+#cabezal {
+    background-color: var(--primary-dark);
+
+    padding: var(--spacing-md);
+    align-items: center;
+    gap: var(--spacing-md);
+
+}
+
+
+#cabezal.flexbox {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 100%;
+    max-width: 100px;
+}
+
+nav {
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    padding: var(--spacing-sm);
+}
+
+nav a:hover {
+    color: var(--secondary-light);
+}
+
+
+
+#hero {
+    background-image: url(img/uvas.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+    background-attachment: fixed;
+    
+  
+    display: flex;
+    align-items: flex-end; 
+    justify-content: space-between;
+    
+}
+
+.contenedor-hero { 
+    display: flex;
+    align-items: flex-end; 
+    justify-content: space-between;
+    max-width: 1000px; 
+    margin: 0 auto;  
+    padding: var(--spacing-xl);
+    
+}
+
+
+.texto-hero {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    color: var(--secondary-light);
+    font-weight: bolder;
+}
+
+
+
+.boton1 {
+    background-color: var(--secondary);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    padding: var(--spacing-md);
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.boton1:hover {
+    background-color:var(--secondary-light);
+    color:white;
+}
+.boton1:active{
+    background-color: var(--secondary-dark);
+}
+
+
+.boton2 {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 600;
+    padding: var(--spacing-sm);
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+
+    margin-top: auto; 
+    align-self: flex-end; 
+    font-size: var(--spacing-md);
+
+}
+
+.boton2:hover {
+    background-color:var(--secondary-light);
+    color:rgb(0, 0, 0);
+}
+
+
+
+/* --------------------------------------------------- */
+#vinos{
+    background-color: var(--secondary-lighter); /*CAMBIAR!!!!! */
+}
+
+#vinos {
+    padding: var(--spacing-xxl);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    
+}
+
+#vinos h2{
+    width: 100%;
+    color: var(--white);
+}
+
+#vinos article{
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    background-color: var(--secondary-darker);
+    color: white;
+
+    box-shadow:
+    2px 1.4px 2.4px rgba(0, 0, 0, 0.24),
+    5px 3.6px 5px rgba(0, 0, 0, 0.203),
+    10.1px 7.4px 8.5px rgba(0, 0, 0, 0.171),
+    20.8px 15.3px 14.7px rgba(0, 0, 0, 0.134),
+    57px 42px 37px rgba(0, 0, 0, 0.08);
+    
+}
+
+
+  
+  
+#vinos h3, p {
+    margin: 10px 0; 
+} 
+
+#vinos img{
+    border-radius: 8px;
+}
+
+  /* ------------------------------------------------- */
+
+#viniedos { 
+    background-color: var(--white);
+}
+
+#viniedos h2 {
+    color: var(--secondary);
+}
+
+.contenedor-viniedos {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* .contenedor-viniedos article {
+        background-color:  var(--primary-lighter);
+        color: white;
+        padding: 25px;
+        box-shadow: -10px 10px 0 var(--primary);
+        margin: var(--spacing-md);
+
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+       
+        border-radius: 30px;
+        padding: var(--spacing-md); 
+} */
+
+.contenedor-viniedos article {
+    background-color:  var(--secondary);
+    color: white;
+    padding: 25px;
+    box-shadow: -10px 10px 0 var(--secondary-dark);
+    margin: var(--spacing-md);
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+   
+    border-radius: 30px;
+    padding: var(--spacing-md); 
+}
+
+.contenedor-viniedos figure{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.contenedor-viniedos .boton1 {
+    background-color: var(--secondary-dark);
+    color: white;
+    font-weight: 600;
+    padding: var(--spacing-sm);
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+
+    margin-top: auto; 
+    align-self: flex-end; 
+
+}
+
+.contenedor-viniedos .boton1:hover {
+    background-color:var(--secondary);
+    color:var(--white);
+}
+
+
+.contenedor-viniedos article em {
+    font-family: "Montserrat", cursive;  
+}
+
+/* ------------------------------------------------- */
+
+#bodega {
+    background-color: var(--secondary-darker);
+
+}
+#bodega h2{
+    color: var(--white);
+}
+
+#bodega img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+
+/* ------------------------------------------------- */
+
+footer {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--primary-dark);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+footer a:hover{
+    color: var(--secondary-light);
+}
+
+footer p{
+    font-family: "Aboreto";
+    color: var(--secondary-light);
+    font-size: var(--spacing-xl);
+}
+
+#creditos {
+  
+    background-color: var(--white);
+}
+#creditos h1{
+    padding: var(--spacing-xl);
+    color: var(--primary);
+    background-color: var(--white);
+}
+
+ul {
+    padding: var(--spacing-xl);
+}
+
+li {
+    
+    padding: var(--spacing-md);
+    border-radius: 40px;
+    display: inline-block;
+    font-size: var(--spacing-lg);
+    color: var(--primary);
+    border: 2px solid var(--primary-dark);
+    box-sizing: border-box;
+    margin: var(--spacing-sm);
+    
+}
+
+
+/*------ MOBILE ------*/
+@media screen and (max-width: 575px) {
+    .noVisibleMobile {
+        display: none;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #vinos { 
+        
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+    
+        min-height: 100vh;  
+        align-content: center;
+        align-items: center;
+
+    }
+
+    
+/* ---------------- */
+
+.contenedor-viniedos {
+        padding: var(--spacing-lg);
+        gap: var(--spacing-sm);
+    }
+
+
+    .contenedor-viniedos  {
+        display: grid;
+        grid-template: auto auto repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    .contenedor-viniedos h2 {
+        grid-row: 1 / 2 ;
+        grid-column: 1 / 3 ;
+    }
+
+    .contenedor-viniedos figure {
+        grid-row: 2 / 3 ;
+        grid-column: 1 / 3 ;
+    }
+    
+    
+    .contenedor-viniedos article:nth-of-type(1) {
+        grid-row: 3 / 4 ;
+        grid-column: 1 / 3 ;
+    }
+    
+    .contenedor-viniedos article:nth-of-type(2) {
+        grid-row: 4 / 5 ;
+        grid-column: 1 / 3 ;
+    
+    }
+
+
+/* ---------------- */
+
+    #bodega {
+        display: grid;
+        grid-template: auto repeat(3, 31vh) / repeat(2, 1fr);
+        padding: var(--spacing-lg);
+        gap: 10px;
+    }
+
+    #bodega h2 {
+        grid-row: 1 / 2; 
+        grid-column: 1 / 3;
+    }
+
+    #bodega img:nth-of-type(1) {
+        grid-row: 2 / 4; 
+        grid-column: 1 / 2;
+    }
+
+    #bodega img:nth-of-type(4) {
+        grid-row: 3 / 5 ; 
+        grid-column: 2 / 3;
+    }
+
+   
+/* ---------------- */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: var(--spacing-xl);
+            background-color:#1C4C2C ;
+        }
+        
+        footer a{
+            text-decoration: none;
+            color: var(--secondary);
+        }
+        
+        .spanFooter img {
+            width: 100%;
+            max-width: 20px;
+        }
+
+    }
+
+
+
+/*------ TABLET ------*/
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    .noVisibleTablet {
+        display: none;
+    }
+
+    #vinos {
+        display: grid;
+        grid-template: auto repeat(4, 1fr) / repeat(2, 1fr);
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+
+
+    #vinos h2 {
+        grid-row: 1 / 2; 
+        grid-column: 1 / 3;
+    }
+    
+    #vinos article:nth-of-type(1) {
+        grid-row: 2 / 4; 
+        grid-column: 1 / 2;
+    }
+
+    #vinos article:nth-of-type(2) {
+        grid-row: 2 / 4; 
+        grid-column: 2 / 3;
+    }
+
+    #vinos article:nth-of-type(3) {
+        grid-row: 4 / 6; 
+        grid-column: 1 / 2;
+    }
+
+    #vinos article:nth-of-type(4) {
+        align-self: flex-end;
+
+    }
+
+    #vinos article:nth-of-type(5) {
+        align-self: flex-start;
+
+    }
+
+/* ---------------- */
+
+.contenedor-viniedos {
+        display: grid;
+        grid-template: auto repeat(3, 1fr) / repeat(4, 1fr);
+        padding: var(--spacing-lg);
+        gap: var(--spacing-sm);
+    }
+
+    .contenedor-viniedos h2 {
+        grid-row: 1 / 2; 
+        grid-column: 1 / 5;
+    }
+
+    .contenedor-viniedos figure {
+        grid-row: 2 / 5 ; 
+        grid-column: 1 / 3;
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contenedor-viniedos article:nth-of-type(1) {
+        grid-row: 2 / 3 ; 
+        grid-column: 3 / 5;
+    }
+
+    .contenedor-viniedos article:nth-of-type(2) {
+        grid-row: 3 / 4 ; 
+        grid-column: 3 / 5;
+    }
+    
+
+    .contenedor-viniedos figure img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+/* ---------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: var(--spacing-xl);
+    background-color:#1C4C2C ;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.spanFooter img {
+    width: 100%;
+    max-width: 20px;
+}
+
+/* ---------------- */
+
+#bodega {
+    display: grid;
+    grid-template: auto repeat(2, 1fr) / repeat(3, 1fr);
+    padding: var(--spacing-lg);
+    gap: var(--spacing-xs);
+}
+
+#bodega h2 {
+    grid-row: 1 / 2; 
+    grid-column: 1 / 4;
+}
+
+#bodega img:nth-of-type(1) {
+    grid-row: 2 / 4; 
+    grid-column: 1 / 2;
+}
+
+#bodega img:nth-of-type(4) {
+    grid-row: 2 / 4 ; 
+    grid-column: 3 / 4;
+}
+
+
+
+
+}
+
+
+/*------ DESKTOP ------*/
+@media screen and (min-width: 992px) {
+    .noVisibleDesktop {
+        display: none;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+    #vinos article {
+        width: calc((100% - var(--spacing-md)* 4) / 5);
+
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+       
+ 
+        
+    }
+    
+    .boton2 {
+        background-color: var(--secondary);
+        color: white;
+        font-weight: 600;
+        padding: var(--spacing-sm);
+        border-radius: 15px;
+        display: inline-block;
+        text-decoration: none;
+    
+        margin-top: auto; 
+        align-self: flex-end; 
+        font-size: var(--spacing-md);
+    
+    }
+
+    .boton2:hover {
+        background-color:var(--secondary-light);
+        color:rgb(0, 0, 0);
+    }
+    
+
+
+      
+
+/* ---------------- */
+
+
+.contenedor-viniedos {
+    display: grid;
+    grid-template: auto auto repeat(2, 1fr) / repeat(6, 1fr);
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xs);
+
+
+}
+
+
+
+  
+.contenedor-viniedos h2 {
+    grid-row: 1 / 2; 
+    grid-column: 1 / 7 ;
+}
+
+.contenedor-viniedos figure {
+    grid-row: 2 / 3; 
+    grid-column: 1 / 7 ;
+}
+
+.contenedor-viniedos article:nth-of-type(1) {
+    grid-row: 3 / 4; 
+    grid-column: 1 / 4;
+}
+
+.contenedor-viniedos article:nth-of-type(2) {
+    grid-row: 3 / 4; 
+    grid-column: 4 / 7;
+}
+
+.contenedor-viniedos article:nth-of-type(3) {
+    grid-row: 4 / 5; 
+    grid-column: 2 / 4;
+}
+
+.contenedor-viniedos article:nth-of-type(4) {
+    grid-row: 4 / 5; 
+    grid-column: 4 / 6;
+}
+
+/* ---------------- */
+
+#bodega {
+    display: grid;
+    grid-template: auto repeat(2, 1fr) / repeat(4, 1fr);
+    padding: var(--spacing-xl);
+    gap: var(--spacing-xs);
+}
+
+#bodega h2 {
+    grid-row: 1 / 2; 
+    grid-column: 1 / 5;
+}
+
+#bodega img:nth-of-type(1) {
+    grid-row: 2 / 4; 
+    grid-column: 1 / 3;
+}
+
+#bodega img:nth-of-type(2) {
+    grid-row: 2 / 3 ; 
+    grid-column: 3 / 5;
+}
+
+#bodega img {
+    transition: transform 0.3s ease; 
+}
+
+  
+#bodega img:hover {
+    transform: scale(1.02); 
+}
+
+       
+}
